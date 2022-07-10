@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21208.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JRd-om-gAT">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21191"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Izj-Nu-xcT">
+            <objects>
+                <viewController id="myT-72-Ibk" customClass="ARViewController" customModule="HowBig" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIv-SD-4ar">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwX-4U-GZ8">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="824"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jOG-Uz-32B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qwX-4U-GZ8" firstAttribute="leading" secondItem="jOG-Uz-32B" secondAttribute="leading" id="5fk-Yw-Igh"/>
+                            <constraint firstItem="jOG-Uz-32B" firstAttribute="bottom" secondItem="qwX-4U-GZ8" secondAttribute="bottom" constant="-34" id="ZWG-9a-DKk"/>
+                            <constraint firstItem="qwX-4U-GZ8" firstAttribute="top" secondItem="bIv-SD-4ar" secondAttribute="top" id="pvM-OO-iv4"/>
+                            <constraint firstItem="jOG-Uz-32B" firstAttribute="trailing" secondItem="qwX-4U-GZ8" secondAttribute="trailing" id="xTT-1F-vRY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jFP-cO-avs"/>
+                    <connections>
+                        <outlet property="sceneView" destination="qwX-4U-GZ8" id="pmB-3P-jvR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S44-aQ-ZQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a2X-mt-19u">
+            <objects>
+                <viewController id="JRd-om-gAT" customClass="ViewController" customModule="HowBig" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0KA-es-vaf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-S3-Smm">
+                                <rect key="frame" x="85" y="606" width="220" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WL-Dr-r7B">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="FvO-cW-ye4"/>
+                                            <constraint firstAttribute="height" constant="58" id="s35-Dc-zYn"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="filled" image="ArIcon" title="View in AR" imagePadding="9" cornerStyle="large">
+                                            <backgroundConfiguration key="background"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                            <color key="baseBackgroundColor" systemColor="tintColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="myT-72-Ibk" kind="show" identifier="toAR" id="Dqi-Dp-PBa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T3-xd-Twf">
+                                        <rect key="frame" x="0.0" y="66" width="220" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="oB4-qU-d5L"/>
+                                            <constraint firstAttribute="height" constant="58" id="qys-WF-Nea"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="filled" title="Choose a dog" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                            <color key="baseBackgroundColor" red="0.21176372700000001" green="0.211951836" blue="0.2360074482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="JRd-om-gAT" eventType="touchUpInside" id="AvM-fa-D6e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="WNb-yu-62h"/>
+                                    <constraint firstAttribute="height" priority="750" constant="124" id="Z33-yd-rXg"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eQJ-NQ-rOT">
+                                <rect key="frame" x="25" y="178" width="340" height="278"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Spu-7o-TCQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="231.66666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Spu-7o-TCQ" secondAttribute="height" multiplier="22:15" id="cXt-iI-Njd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLb-Qr-FSc">
+                                        <rect key="frame" x="130.33333333333334" y="239.66666666666671" width="79.333333333333343" height="38.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                        <color key="textColor" red="0.21176372700000001" green="0.211951836" blue="0.2360074482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AWO-kb-2UM"/>
+                        <color key="backgroundColor" red="0.46227294209999997" green="0.74772608279999997" blue="0.87394422289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AWO-kb-2UM" firstAttribute="bottom" secondItem="1qz-S3-Smm" secondAttribute="bottom" constant="80" id="7Ch-Ti-TEP"/>
+                            <constraint firstItem="1qz-S3-Smm" firstAttribute="centerX" secondItem="0KA-es-vaf" secondAttribute="centerX" id="9gd-hR-jnJ"/>
+                            <constraint firstItem="AWO-kb-2UM" firstAttribute="trailing" secondItem="eQJ-NQ-rOT" secondAttribute="trailing" constant="25" id="InB-HP-S7I"/>
+                            <constraint firstItem="1qz-S3-Smm" firstAttribute="top" secondItem="eQJ-NQ-rOT" secondAttribute="bottom" constant="150" id="Z64-ye-21E"/>
+                            <constraint firstItem="eQJ-NQ-rOT" firstAttribute="leading" secondItem="AWO-kb-2UM" secondAttribute="leading" constant="25" id="mff-Xf-OXE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arButton" destination="5WL-Dr-r7B" id="Ha1-XC-3bW"/>
+                        <outlet property="breedLabel" destination="GLb-Qr-FSc" id="wDR-G0-lKE"/>
+                        <outlet property="dogButton" destination="1T3-xd-Twf" id="n11-Sk-eJ9"/>
+                        <outlet property="dogImage" destination="Spu-7o-TCQ" id="hyr-NS-LK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tug-oC-9B6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArIcon" width="34" height="39"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
