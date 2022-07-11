@@ -1,6 +1,6 @@
 # Name
 
-**HowBig** - app to help kids visualise objects or animals in real life.
+**HowBig** - app to help kids visualize objects or animals in real life.
 
 ## Description
 
