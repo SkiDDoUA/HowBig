@@ -12,3 +12,5 @@ In current version with usage of **Machine Learning** and **Augmented Reality** 
 - [Stanford Dogs Dataset for ML Model](http://vision.stanford.edu/aditya86/ImageNetDogs/)
 - [Dog AR Model](https://github.com/yx79/ARKit-Wolf)
 - [Dog API to get dog breed size](https://docs.thedogapi.com/example-by-breed)
+
+![App Icon](https://github.com/SkiDDoUA/HowBig/blob/main/HowBig/Assets.xcassets/AppIcon.appiconset/Instagram%20post%20-%20222.png)
