@@ -4,7 +4,7 @@
 
 ## Description
 
-In current version with usage of **Machine Learning** and **Augmented Reality** you can choose a dog image and instantly see how big he is in real life.
+In current version with usage of **Core ML** and **ARKit** you can choose a dog image and instantly see how big he is in real life.
 
 ## Resources
 
