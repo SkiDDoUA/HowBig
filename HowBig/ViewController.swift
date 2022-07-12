@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             } else {
                 self.breedLabel.text = "Dog not recognized"
                 self.breedLabel.textColor = .red
+                self.arButton.isHidden = true
             }
             self.dogImage.isHidden = false
             self.breedLabel.isHidden = false
