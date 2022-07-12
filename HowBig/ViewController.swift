@@ -35,15 +35,22 @@ class ViewController: UIViewController {
             let predictionsStr = preditions?.reduce(into: "") {
                 $0.append("\($1.0)\n\($1.1)\n")
             }
-            print(predictionsStr)
-            if let index = predictionsStr?.firstIndex(of: "\n") {
-                let breed = predictionsStr?.prefix(upTo: index)
-                self.dogBreed = String(breed!).capitalized.replacingOccurrences(of: "_", with: " ")
-                self.breedLabel.text = self.dogBreed
+            let predictionConfidence = Float(predictionsStr?.split(separator: "\n")[1] ?? "0")
+            print(predictionConfidence)
+            if predictionConfidence! > 0.7 {
+                if let index = predictionsStr?.firstIndex(of: "\n") {
+                    let breed = predictionsStr?.prefix(upTo: index)
+                    self.dogBreed = String(breed!).capitalized.replacingOccurrences(of: "_", with: " ")
+                    self.breedLabel.text = self.dogBreed
+                }
+                self.arButton.isHidden = false
+                self.breedLabel.textColor = .black
+            } else {
+                self.breedLabel.text = "Dog not recognized"
+                self.breedLabel.textColor = .red
             }
             self.dogImage.isHidden = false
             self.breedLabel.isHidden = false
-            self.arButton.isHidden = false
         }
     }
     
