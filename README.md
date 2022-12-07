@@ -13,4 +13,10 @@ In current version with usage of **Core ML** and **ARKit** you can choose a dog 
 - [Dog AR Model](https://github.com/yx79/ARKit-Wolf)
 - [Dog API to get dog breed size](https://docs.thedogapi.com/example-by-breed)
 
+
+
+https://user-images.githubusercontent.com/54885442/206202363-5406c8f1-1f48-40be-ab47-39d860f50dc3.mp4
+
+
+
 ![App Icon](https://github.com/SkiDDoUA/HowBig/blob/main/HowBig/Assets.xcassets/AppIcon.appiconset/Instagram%20post%20-%20222.png)
